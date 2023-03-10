@@ -121,31 +121,3 @@ if __name__ == "__main__":
         with open("./probability_weights.json", "w") as file:
             weights_json = json.dumps(conf, indent=4)
             file.write(weights_json)
-
-    """
-    # class_name = input("Enter class name [4.A or 4.B]: ")
-    while class_name not in ["4.A", "4.B"]:
-        class_name = input("Incorrect input -- choose '4.A' or '4.B': " )
-
-    # true_weight = weights[class_name]["true_weight"]
-    # false_weight = weights[class_name]["false_weight"]
-    
-    # can_go_to_toilet = random.choices([True, False], weights=[true_weight, false_weight])[0]
-    
-    # false_weight = random.uniform(false_weight, false_weight + true_weight*0.2)
-    # true_weight = 1 - false_weight
-    # weights[class_name]["true_weight"] = true_weight
-    # weights[class_name]["false_weight"] = false_weight
-    can_go_to_toilet = run_a_round(class_name, conf)
-
-    with open("./probability_weights2.json", "w") as file:
-        weights_json = json.dumps(weights, indent=4)
-        file.write(weights_json)
-
-    student_name = input("Enter student's name: ")
-    
-    if can_go_to_toilet:
-        print(f'{colors["green"]}{student_name} can go, hooray :){colors["end"]}')
-    else:
-        print(f'{colors["red"]}{student_name} can\'t go, too bad :({colors["end"]}')
-    """
