@@ -87,7 +87,7 @@ funcs = {
 
 if __name__ == "__main__":
 
-    with open("./probability_weights2.json", "r") as file:
+    with open("./probability_weights.json", "r") as file:
         conf = json.load(file)
 
     print(welcome_message, '\n', help_message)
@@ -118,7 +118,7 @@ if __name__ == "__main__":
             print(colors["red"] + 'Wrong command entered! Try again.' + colors["end"])
 
         # Writes out in every iteration because the program could be killed before writing the new conf
-        with open("./probability_weights2.json", "w") as file:
+        with open("./probability_weights.json", "w") as file:
             weights_json = json.dumps(conf, indent=4)
             file.write(weights_json)
 
