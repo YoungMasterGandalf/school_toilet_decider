@@ -63,13 +63,13 @@ def run_a_round(class_name, init_conf:dict):
     student_name = input("Enter student's name: ")
     
     if can_go_to_toilet:
-        print(f'{colors["green"]}{student_name} can go, hooray :){colors["end"]}\n')
+        print(f'\n{colors["green"]}{student_name} can go, hooray :){colors["end"]}\n')
     else:
-        print(f'{colors["red"]}{student_name} can\'t go, too bad :({colors["end"]}\n')
+        print(f'\n{colors["red"]}{student_name} can\'t go, too bad :({colors["end"]}\n')
 
 def show_class_conf(class_name, init_conf:dict):
-    percentage_conf = f'"Positive chance" = {init_conf[class_name]["true_weight"]*100} %, "Negative chance" = {init_conf[class_name]["false_weight"]*100}'
-    print(f'{colors["green"]}{class_name}{colors["end"]}: {percentage_conf}\n')
+    percentage_conf = f'"Positive chance" = {init_conf[class_name]["true_weight"]*100} %, "Negative chance" = {init_conf[class_name]["false_weight"]*100} %'
+    print(f'\n{colors["green"]}{class_name}{colors["end"]}: {percentage_conf}\n')
 
 def show_help(*args):
     print(help_message)
@@ -100,7 +100,7 @@ if __name__ == "__main__":
         print("No class configured, please run the 'Configurator' file to create a new configuration.")
         finished = True
     else:
-        print(f"Current conf:\n{conf}")
+        print(f"Current conf:\n{conf}\n")
 
     while not finished:
         user_input = input("Enter a command (for help type 'help'): ")
